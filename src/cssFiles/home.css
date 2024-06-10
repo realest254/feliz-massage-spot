@@ -1,0 +1,383 @@
+/* Basic resets and base styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.sections-holder {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Styling for the homepage section */
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #F3EAC2;
+}
+
+/* Upper section styles */
+.upper-section {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Lower section styles */
+.lower-section {
+  flex: 3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Navigation and logo styles */
+.logo-container {
+  margin-right:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  min-width: 50%;;
+  margin-right: 20px;
+}
+
+.navigation .large-screen {
+  display: flex; /* Allow flexbox layout */
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Full width of the navigation bar */
+  padding: 20px 10px; /* Add some padding for separation */
+  border-radius: 5px; /* Add a subtle rounded corner */
+  
+}
+
+.navigation .large-screen a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+  font-size: 1rem; /* Adjust font size */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  position: relative; /* Ensure pseudo-element is positioned relative to the link */
+  transition: color 0.2s ease-in-out; /* Add transition for hover */
+}
+
+.navigation .large-screen a:hover {
+  color: #ddd; /* Slightly lighter color on hover */
+}
+
+.navigation .large-screen a::after {
+  content: ""; /* Empty content */
+  position: absolute; /* Position the indicator below the active link */
+  bottom: -3px; /* Adjust position of the indicator */
+  left: 0;
+  width: 2px; /* Initial width of the indicator */
+  height: 3px; /* Adjust height of the indicator */
+  background-color: #305750;
+  transition: all 0.2s ease-in-out; /* Add transition for smooth movement */
+}
+
+.navigation .large-screen a:hover::after {
+  width: 100%; /* Expand the indicator width on hover */
+}
+
+
+.large-screen ul {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed; /* Ensures the menu stays visible when scrolling */
+  top: 1rem; /* Adjust positioning as needed */
+  right: 1rem; /* Adjust positioning as needed */
+  background-color: #f0f0f0; /* Match upper section background */
+  border-radius: 5px;
+  padding: 10px; /* Optional padding */
+}
+
+.bar {
+  background-color: black;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Apply transition to transform and opacity properties */
+}
+
+.hamburger-menu.active .bar:nth-child(1) {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Ensure transition speed for transformation to "X" */
+  transform: translateY(4px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Ensure transition speed for transformation to "X" */
+  transform: translateY(-10px) rotate(-45deg);
+}
+/* Lower section styles */
+.lower-section {
+  border-radius: 30px; /* Adjust the radius as needed */
+  overflow: hidden; /* Ensure content respects the border radius */
+  background-size: cover; /* Make sure the background image covers the section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Ensure the background does not repeat */
+}
+
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+/* Home info styles */
+.home {
+  text-align: center;
+}
+.lower-section h1 {
+  font-family: "Playfair Display", serif; /* Or "Abril Display", serif */
+  color: #e5d7c8; /* Deep brown */
+  font-size: 3.5rem; /* Adjust font size as needed */
+  text-align: center; /* Center align the heading */
+  margin-bottom: 1rem; /* Add some bottom margin */
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.lower-section h1::before {
+  content: 'Relax rejuvenate with';
+  display: block;
+}
+
+.lower-section h1::after {
+  content: 'our expert massages';
+  display: block;
+}
+
+.lower-section p::before {
+  content: 'Experience the ultimate relaxation and relief from stress ';
+  display: block;
+  font-family: "Outfit", sans-serif; /* Or "Roboto", sans-serif */
+  color: #f7f3f0; /* Lighter shade of H1 color */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: .5rem; /* Add some bottom margin */
+}
+
+.lower-section p::after {
+  content: ' with our wide range of massage services';
+  display: block;
+  font-family: "Outfit", sans-serif; /* Or "Roboto", sans-serif */
+  color: #f7f3f0; /* Lighter shade of H1 color */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: 1rem; /* Add some bottom margin */
+}
+
+
+.book-now-button1 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #305750;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.book-now-button:hover {
+  background-color:  #4a776c;
+}
+
+.small-screen.inactive {
+  display: none;
+}
+
+.small-screen .active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for the side show */
+.navigation .small-screen.active {
+  transform: translateX(0); /* Show the navigation when active */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition */
+  background-color: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  width: 70%; /* Adjust width as desired */
+  position: fixed; /* Fix the side show to the viewport */
+  top: 0; /* Position the top at 0 */
+  left: 0; /* Position the left at 0 */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Allow for flexbox layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Align items in the center vertically */
+  align-items: center; /* Align items in the center horizontally */
+  z-index: 10; /* Ensure the side show is on top of other elements */
+  border-radius: 0 2.5em 2.5em 0; /* Curved top right corner with radius 20px */
+}
+
+.navigation .small-screen.inactive {
+  transform: translateX(-100%); /* Hide the navigation when inactive */
+  transition: transform 0.3s ease-in-out; /* Maintain smooth transition */
+}
+
+.navigation .small-screen.active ul {
+  list-style-type: none; /* Remove default list style */
+  padding: 20px; /* Add padding for separation */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  width: 100%; /* Full width of the side show */
+  height: 100%;
+  justify-content: space-around;
+}
+
+.navigation .small-screen.active li {
+  margin: 10px 0; /* Spacing between list items */
+  text-align: center; /* Center text within list items */
+}
+
+.navigation .small-screen.active a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Light text color for dark background */
+  font-family: "Open Sans", sans-serif; /* Responsive font */
+  font-size: 1.1rem; /* Adjust base font size */
+  transition: color 0.2s ease-in-out; /* Add transition for color change */
+}
+
+.navigation .small-screen.active a:hover {
+  color: #305750;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .lower-section h1 {
+    font-size: 2.5em;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .navigation.inactive nav {
+    display: none;
+  }
+
+  .navigation.active nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background-color: #f0f0f0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .upper-section {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .logo-container {
+    align-self: flex-start;
+    margin: 20px;
+  }
+}
+.back-arrow {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  width: 20px; /* Adjust the width to change the size of the V shape */
+  height: 25px; /* Adjust the height to change the size of the V shape */
+  cursor: pointer;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  width: 5px; /* Adjust the width of the lines */
+  height: 100%; /* Make the lines extend the full height of the container */
+  background-color: black; /* Set the color of the lines */
+}
+
+.left-arrow {
+  left: 0;
+  transform: rotate(45deg); /* Rotate the left line */
+}
+
+.right-arrow {
+  right: 0;
+  transform: rotate(-45deg); /* Rotate the right line */
+}
+/* Styling for the navigation links */
+.navigation .large-screen a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+  font-size: 1rem; /* Adjust font size */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  position: relative; /* Ensure pseudo-element is positioned relative to the link */
+  transition: color 0.2s ease-in-out; /* Add transition for hover */
+}
+
+/* Styling specifically for the contact link */
+.navigation .large-screen a[href="#contacts"] {
+  color: white; /* Change color for the contact link */
+  background-color: #305750;
+  padding: 10px 15px; /* Adjust padding to provide a rectangular shape */
+  border-radius: 5px;
+}
+.navigation .large-screen a[href="#contacts"]:hover {
+  color: #333; /* Maintain text color */
+  background-color: #305750; /* Maintain background color */
+}
+
+/* Indicator style specifically for the contact link */
+.navigation .large-screen a[href="#contacts"]::after {
+  background-color: #006d5b; /* Dark teal color for the indicator */
+}
+/* WhatsApp icon styles */
+.whatsapp-icon {
+  position: fixed; /* Position the icon fixed on the viewport */
+  bottom: 1em; /* Adjust the distance from the bottom */
+  left: 1em; /* Adjust the distance from the left */
+  z-index: 9999; /* Ensure the icon stays on top of other elements */
+  font-size: 3em; /* Adjust the icon size */
+  color: rgb(2, 163, 2); /* Adjust the icon color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1); /* Add a slight scale effect on hover */
+}

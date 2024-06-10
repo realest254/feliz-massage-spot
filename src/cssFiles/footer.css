@@ -1,0 +1,24 @@
+/* Style for the footer */
+.footer {
+    background-color: #333; /* Choose your desired background color */
+    color: #fff; /* Choose your desired text color */
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+/* Style for the social media icons */
+.footer-icons {
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.icon-link {
+    display: inline-block;
+    margin: 0 10px; /* Adjust margin as needed */
+    font-size: 24px; /* Adjust icon size as needed */
+    color: #fff; /* Choose your desired icon color */
+    transition: color 0.3s ease; /* Add smooth transition for color change */
+}
+
+.icon-link:hover {
+    color: #55acee; /* Change icon color on hover, adjust as needed */
+}

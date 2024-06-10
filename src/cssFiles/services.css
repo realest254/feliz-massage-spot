@@ -1,0 +1,148 @@
+/* Styles for individual service parts */
+.service-part {
+    width: 100%; /* Adjust width based on desired spacing */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex;
+    height: calc(100vw * 0.48);
+}
+
+/* Styles for text within service parts */
+.service-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 50%;
+}
+
+.service-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: 'Outfit';
+}
+
+.service-text p {
+    font-size: 1.3em;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Inter';
+}
+
+.service-text small {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.service-text h2 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.service-text ul {
+    margin-bottom: 1.5em;
+}
+
+.service-text ul li {
+    font-size: 1.1em;
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 2;
+}
+
+/* Styles for the "Book Now" button */
+.book-now-button {
+    display: block;
+    width: 30%;
+    padding: 10px 0;
+    background-color: #305750;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.book-now-button:hover {
+    background-color: #88B07B;
+}
+
+/* Styles for images within service parts */
+.service-image {
+    width: 50%;
+    padding: 1em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.service-image img {
+    width: 90%;
+    height: 90%;
+    border-radius: 10%;
+    object-fit: cover;
+}
+@media screen and (max-width: 1200px) {
+    .service-part {
+        min-height: 80vh;
+        height: auto;
+    }
+
+    .service-image {
+        height: 90%; /* Example: image takes up half of the part's height */
+    }
+
+    .service-text {
+        height: 50%;
+    }
+}
+
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .service-part {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+    .service-text {
+        width: 90%;
+        height: auto;
+    }
+    .service-image {
+        width: 90%;
+        height: auto;
+    }
+    .service-part:nth-child(even) .service-image {
+        order: 1;
+    }
+    .service-part:nth-child(even) .service-text {
+        order: 2;
+    }
+    .service-part:nth-child(odd) .service-image {
+        order: 2;
+    }
+    .service-part:nth-child(odd) .service-text {
+        order: 1;
+    }
+}
+
+/* Additional styles for the second service part */
+.service-text-top {
+    flex: 1;
+}
+
+.service-text-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-div, .right-div {
+    width: 48%;
+}
