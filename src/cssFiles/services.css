@@ -16,14 +16,14 @@
 }
 
 .service-text h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 10px;
     font-family: 'Outfit';
 }
 
 .service-text p {
-    font-size: 1.3em;
-    line-height: 2;
+    font-size: 1.2em;
+    line-height: 1.5;
     margin-bottom: 20px;
     color: black;
     font-family: 'Inter';
@@ -110,9 +110,21 @@
         gap: 10px;
         height: auto;
     }
+    .service-text h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        font-family: 'Outfit';
+    }
     .service-text {
         width: 90%;
         height: auto;
+    }
+    .service-text p {
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: black;
+        font-family: 'Inter';
     }
     .service-image {
         width: 90%;

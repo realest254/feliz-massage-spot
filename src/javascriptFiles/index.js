@@ -4,7 +4,7 @@ import createTestimonialSection from '../javascriptFiles/testimonial.js';
 import createContactSection from  '../javascriptFiles/contact.js';
 import createFooter from '../javascriptFiles/footer.js';
 import homeBg from '../images/background h1.jpg';
-import logo from '../images/felliz1.jpg';
+import logo from '../images/newLogo.jpeg';
 
 function createHomePage() {
     const sectionHolder = document.querySelector('.sections-holder'); // Select the sections-holder

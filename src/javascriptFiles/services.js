@@ -1,5 +1,8 @@
 import '../cssFiles/services.css';
-import waxed from "../images/waxed.jpg";
+import Swedish from "../images/newSweedish.jpg";
+import feet from "../images/newFeet.jpg";
+import waxed from "../images/newWaxed.jpg";
+
 
 // Define the data for each service part
 const servicesData = [
@@ -7,7 +10,7 @@ const servicesData = [
         title: "Discover the Benefits of Swedish Massage",
         description: "Experience the ultimate relaxation and rejuvenation with our Swedish massage. Our skilled therapists use long, flowing strokes to release tension and promote deep relaxation whether you are looking to unwind after a long day or relieve muscle soreness, Swedish massage is the perfect choice.",
         buttonText: "Book Now",
-        imagePath: waxed
+        imagePath: Swedish
     },
     {
         title: "Experience the Healing Power of Reflexology",
@@ -17,7 +20,7 @@ const servicesData = [
             { header: "Why Choose Us", items: ["Highly trained and experienced reflexologists."] }
         ],
         buttonText: "Book Now",
-        imagePath: waxed
+        imagePath: feet
     },
     {
         title: "Discover the Smoothest Skin with Our Professional Waxing Services",
