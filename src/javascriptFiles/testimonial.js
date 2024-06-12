@@ -1,4 +1,6 @@
 import '../cssFiles/testimonial.css';
+import img1 from "../images/testimony3.jpg";
+import img2 from "../images/testimony2.jpg";
 
 export default function createTestimonialSection() {
     const sectionHolder = document.querySelector('.sections-holder');
@@ -16,8 +18,8 @@ export default function createTestimonialSection() {
     const testimonialContainer = document.createElement('div');
     testimonialContainer.classList.add('testimonial-container');
   
-    const testimonial1 = createTestimonial('John Doe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 5);
-    const testimonial2 = createTestimonial('Jane Smith', 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 4);
+    const testimonial1 = createTestimonial('Mary Kendi', '"Felly\'s massage was perfect for my busy schedule.The therapist was punctual, professional and gave an amazing massage and left me feeling refreshed and relaxed."', 5, img1);
+    const testimonial2 = createTestimonial('Ivy Otiende', '"Having Felly come to my home was incredibly convenient, and the massage provided real relief for my chronic back pain."', 4, img2);
   
     testimonialContainer.appendChild(testimonial1);
     testimonialContainer.appendChild(testimonial2);
@@ -27,9 +29,9 @@ export default function createTestimonialSection() {
     section.appendChild(testimonialContainer);
   
     sectionHolder.appendChild(section);
-  }
-  
-  function createTestimonial(name, text, rating) {
+}
+
+function createTestimonial(name, text, rating, imgSrc) {
     const testimonial = document.createElement('div');
     testimonial.classList.add('testimonial');
   
@@ -57,7 +59,7 @@ export default function createTestimonialSection() {
     clientName.textContent = name;
   
     const clientPhoto = document.createElement('img');
-    clientPhoto.src = ''; // Add the source for client photo
+    clientPhoto.src = imgSrc; 
   
     clientInfo.appendChild(clientName);
     clientInfo.appendChild(clientPhoto);
@@ -67,5 +69,4 @@ export default function createTestimonialSection() {
     testimonial.appendChild(clientInfo);
   
     return testimonial;
-  }
-  
+}

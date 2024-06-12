@@ -2,6 +2,8 @@ import '../cssFiles/services.css';
 import Swedish from "../images/newSweedish.jpg";
 import feet from "../images/newFeet.jpg";
 import waxed from "../images/newWaxed.jpg";
+import being from "../images/wellBeing.jpg";
+
 
 
 // Define the data for each service part
@@ -37,7 +39,7 @@ const servicesData = [
         title: "Improve Your Well-being with Regular Massages",
         description: "Regular massages offer numerous health benefits, including stress reduction, pain relief, improved circulation, and enhanced relaxation. Treat yourself to a massage today and experience the positive impact it can have on your overall well-being.",
         buttonText: "Book Now",
-        imagePath: waxed
+        imagePath: being
     }
 ];
 

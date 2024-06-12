@@ -54,7 +54,7 @@ function createHomePage() {
 
     const ul = document.createElement('ul');
 
-    const navList = ['Services', 'About', 'Testimonials', 'Contacts'];
+    const navList = ['Services',  'Testimonials', 'Contacts'];
 
     navList.forEach(item => {
         const li = document.createElement('li');
@@ -201,7 +201,7 @@ function createHomePage() {
         const whatsappIcon = document.createElement('i');
         whatsappIcon.classList.add('fab', 'fa-whatsapp', 'whatsapp-icon');
         whatsappIcon.addEventListener('click', function() {
-            window.open('https://wa.me/1234567890', '_blank'); // Replace the number with your WhatsApp number
+            window.open('https://wa.me/254726677994', '_blank'); // Replace the number with your WhatsApp number
         });
         sectionHolder.appendChild(whatsappIcon);
     }
