@@ -1,5 +1,5 @@
-// Import the CSS file for styling
 import '../cssFiles/contact.css'; 
+import accessKey from '../../utils.js';
 
 // Helper function to create input elements
 function createInput(type, placeholder, name, hidden = false) {
@@ -16,18 +16,17 @@ function createInput(type, placeholder, name, hidden = false) {
 
 // Function to create the contact section
 export default function createContactSection() {
-    const sectionsHolder = document.querySelector('.sections-holder'); // Assuming sectionsHolder is accessible globally
+    const sectionsHolder = document.querySelector('.sections-holder'); 
 
-    // Create the contact section element
     const contactSection = document.createElement('section');
     contactSection.classList.add('contact-section', 'container');
-    contactSection.id = 'contacts'; // Set the id for the section
+    contactSection.id = 'contacts'; 
 
-    // Create the contact info div
+    
     const contactInfoDiv = document.createElement('div');
     contactInfoDiv.classList.add('contact-info');
 
-    // Add contact info
+    
     const contactHeader = document.createElement('h2');
     contactHeader.textContent = 'Contact Us';
     contactHeader.classList.add('heading');
@@ -37,18 +36,18 @@ export default function createContactSection() {
     scriptParagraph.textContent = 'Please feel free to contact us for any inquiries or to book a massage.';
     contactInfoDiv.appendChild(scriptParagraph);
 
-    // Create the contact form div
+    
     const contactFormDiv = document.createElement('div');
     contactFormDiv.classList.add('contact-form', 'form');
 
     const form = document.createElement('form');
-    form.action = 'https://api.web3forms.com/submit'; // Set action attribute for form submission
+    form.action = 'https://api.web3forms.com/submit'; 
 
-    // Add form inputs
+    
     const accessKeyInput = document.createElement('input');
     accessKeyInput.type = 'hidden';
     accessKeyInput.name = 'access_key';
-    accessKeyInput.value = 'e6696292-6772-4381-8654-e020f77ae260'; // Replace with your actual access key
+    accessKeyInput.value = accessKey;
     form.appendChild(accessKeyInput);
 
     const nameInput = createInput('text', 'Your Name', 'name');
@@ -73,24 +72,22 @@ export default function createContactSection() {
     form.appendChild(submitButton);
 
     const telErrorMessage = document.createElement('span');
-    telErrorMessage.id = 'tel-error-message'; // Element to show error message
+    telErrorMessage.id = 'tel-error-message'; 
     contactFormDiv.appendChild(telErrorMessage);
 
-    // Add form element to contact form div
     contactFormDiv.appendChild(form);
 
-    // Append contact info div and contact form div to the contact section
+    
     contactSection.appendChild(contactInfoDiv);
     contactSection.appendChild(contactFormDiv);
 
-    // Append the contact section to the sections holder
+    
     sectionsHolder.appendChild(contactSection);
 
     // Event listener for form submission
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Additional validation for required fields
         if (!nameInput.value || !telInputVisible.value || !messageInput.value) {
             alert('Please fill out all required fields.');
             return;
@@ -114,7 +111,7 @@ export default function createContactSection() {
         submitForm();
     });
 
-    // Function to submit the form
+   
     function submitForm() {
         const formData = new FormData(form);
         const object = Object.fromEntries(formData);

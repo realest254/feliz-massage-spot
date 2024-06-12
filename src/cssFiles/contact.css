@@ -11,19 +11,19 @@
     }
   }
   
-  /* Styling for the contact section container */
+  
   .container {
       background: #D3D0CBFF;
       box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
       padding: 32px 24px;
   }
   
-  /* Contact info heading */
+  
   .contact-info h2 {
       color: #61886f;
   }
   
-  /* Contact info paragraph */
+  
   .contact-info p {
       text-align: center;
   }
@@ -66,7 +66,7 @@
       border-inline: 2px solid #12B1D1;
   }
   
-  /* Textarea height adjustment */
+ 
   .form textarea {
       height: 96px;
       resize: none;
@@ -97,7 +97,7 @@
       box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
   }
   
-  /* Heading styling */
+ 
   .heading {
       text-align: center;
       font-weight: 900;
@@ -105,7 +105,7 @@
       color: rgb(16, 137, 211);
   }
   
-  /* Additional form styles for alignment and margins */
+ 
   .form {
       display: flex;
       flex-direction: column;
@@ -122,6 +122,6 @@
   
   #result {
       margin-top: 15px;
-      color: red;
+      color: green;
   }
   

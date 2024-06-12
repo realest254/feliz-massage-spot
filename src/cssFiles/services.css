@@ -1,12 +1,11 @@
-/* Styles for individual service parts */
 .service-part {
-    width: 100%; /* Adjust width based on desired spacing */
-    overflow: hidden; /* Ensure content doesn't overflow */
+    width: 100%; 
+    overflow: hidden; 
     display: flex;
     height: calc(100vw * 0.48);
 }
 
-/* Styles for text within service parts */
+
 .service-text {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,7 @@
     line-height: 2;
 }
 
-/* Styles for the "Book Now" button */
+
 .book-now-button {
     display: block;
     width: 30%;
@@ -71,7 +70,7 @@
     background-color: #88B07B;
 }
 
-/* Styles for images within service parts */
+
 .service-image {
     width: 50%;
     padding: 1em;
@@ -93,7 +92,7 @@
     }
 
     .service-image {
-        height: 90%; /* Example: image takes up half of the part's height */
+        height: 90%; 
     }
 
     .service-text {
@@ -144,7 +143,7 @@
     }
 }
 
-/* Additional styles for the second service part */
+
 .service-text-top {
     flex: 1;
 }

@@ -8,11 +8,11 @@ export default function createFooter() {
     const footer = document.createElement('footer');
     footer.classList.add('footer');
 
-    // Create the icons div
+    
     const iconsDiv = document.createElement('div');
     iconsDiv.classList.add('footer-icons');
 
-    // Define the URLs of your social media profiles
+    
     const socialMediaLinks = [
         { iconClass: 'fab fa-facebook-f', url: 'https://www.facebook.com/yourpage' },
         { iconClass: 'fab fa-twitter', url: 'https://twitter.com/youraccount' },
@@ -20,7 +20,7 @@ export default function createFooter() {
         { iconClass: 'fab fa-linkedin-in', url: 'https://www.linkedin.com/in/yourprofile' }
     ];
 
-    // Add icon links
+   
     socialMediaLinks.forEach(linkInfo => {
         const iconLink = document.createElement('a');
         iconLink.href = linkInfo.url;
@@ -38,10 +38,10 @@ export default function createFooter() {
     const copyrightPara = document.createElement('p');
     copyrightPara.textContent = `\u00A9 ${year} Your Website. All rights reserved.`;
 
-    // Append elements to footer
+    
     footer.appendChild(iconsDiv);
     footer.appendChild(copyrightPara);
 
-    // Append footer to the document body
+    
     sectionsHolder.appendChild(footer);
 }

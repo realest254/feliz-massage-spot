@@ -5,8 +5,6 @@ import waxed from "../images/newWaxed.jpg";
 import being from "../images/wellBeing.jpg";
 
 
-
-// Define the data for each service part
 const servicesData = [
     {
         title: "Discover the Benefits of Swedish Massage",
@@ -43,14 +41,14 @@ const servicesData = [
     }
 ];
 
-// Function to create a service part element
+
 function createServicePart(service, index) {
     const servicePart = document.createElement('div');
     servicePart.classList.add('service-part');
     servicePart.id = `service-part-${index}`;
     servicePart.style.backgroundColor = index % 2 === 0 ? '#F3EAC2' : '#E5E5E5';
 
-    // Create elements for service image
+    
     const serviceImage = document.createElement('div');
     serviceImage.classList.add('service-image');
     const img = document.createElement('img');
@@ -58,11 +56,11 @@ function createServicePart(service, index) {
     img.alt = service.title;
     serviceImage.appendChild(img);
 
-    // Create elements for service text
+    
     const serviceText = document.createElement('div');
     serviceText.classList.add('service-text');
 
-    // For the second part, create a special layout
+    
     if (index === 1) {
         const serviceTextTop = document.createElement('div');
         serviceTextTop.classList.add('service-text-top');
@@ -136,7 +134,7 @@ function createServicePart(service, index) {
     return servicePart;
 }
 
-// Function to add services to the services section
+
 function addServicesToSection(servicesData) {
     const servicesSection = document.createElement('section');
     servicesSection.classList.add('services');
@@ -151,7 +149,7 @@ function addServicesToSection(servicesData) {
     sectionHolder.appendChild(servicesSection);
 }
 
-// Export the function to create the services section
+
 export default function createServicesSection() {
     addServicesToSection(servicesData);
 }
